@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+</head>
+<body>
+    <header>
+        <div class="title-logo">
+            <img src="" alt="">
+            <h1>Library</h1>
+        </div>
+        <button id="btn-addBook">ADD BOOK</button>
+    </header>
+        
+    <main>
+        <div class="library-buttons">
+            <button id="btn-empty">Empty library</button>
+            <form class="sort-buttons">
+                <label for="sort-list">Sort by:</label>
+                <select name="sort-list" id="sort-list">
+                    <option value="1">Title (A -> Z)</option>
+                    <option value="2">Title (Z -> A)</option>
+                    <option value="3">Author (A -> Z)</option>
+                    <option value="4">Author (Z -> A)</option>
+                    <option value="5">Pages (Min -> Max)</option>
+                    <option value="6">Pages (Max -> Min)</option>
+                    <option value="7">Is read? (First read)</option>
+                    <option value="8">Is read? (First not read)</option>
+                </select>
+                <button type="submit" id="btn-sort">Sort</button>
+            </form>
+        </div>
+        <div class="library">
+        </div>
+    </main>
+
+    <footer>
+        <p>Copyrigth © Valentín Taverna</p>
+    </footer>
+    
+    <section class="form-popup hidden">
+        <form id="form-addBook">
+            <input type="text" name="title" id="title" required>
+            <input type="text" name="author" id="author" required>
+            <input type="number" name="pages" id="pages" required>
+            <input type="checkbox" name="isRead" id="isRead" value="checked">
+            <button type="submit" id="btn-newBook">Add book</button>
+        </form>
+    </section>
+</body>
+<script src="script.js"></script>
+</html>
