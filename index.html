@@ -43,7 +43,7 @@
             <h2>Add a new book</h2>
             <div>
                 <label for="title">Title:</label>
-                <input type="text" name="title" id="title" required oninput="this.value = this.value.replace(/[^a-zA-Z]/,'')">
+                <input type="text" name="title" id="title" required oninput="this.value = this.value.replace(/[^a-zA-Z0-9 ]/,'')">
             </div>
             <div>
                 <label for="author">Author:</label>
