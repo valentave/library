@@ -53,6 +53,13 @@ header {
     width: 15ch;
     height: 2.5rem;
     background: var(--orange1);
+    transition: all 0.25s;
+}
+
+#btn-addBook:hover {
+    width: 18ch;
+    height: 3rem;
+    transition: all 0.25s;
 }
 
 .library-buttons {
@@ -69,6 +76,13 @@ header {
     height: 1.8rem;
     background: var(--orange1);
     margin-right: 15px;
+    transition: all 0.25s;
+}
+
+#btn-empty:hover {
+    width: 18ch;
+    height: 2.3rem;
+    transition: all 0.25s;
 }
 
 .sort-buttons {
@@ -95,6 +109,13 @@ option {
     width: 8ch;
     height: 1.8rem;
     background: var(--orange1);
+    transition: all 0.25s;
+}
+
+#btn-sort:hover {
+    width: 12ch;
+    height: 2.3rem;
+    transition: all 0.25s;
 }
 
 main {
@@ -127,6 +148,13 @@ main {
     background: var(--green1);
     height: 1.8rem;
     color: #fff;
+    transition: all 0.25s;
+}
+
+.btn-read:hover {
+    width: 95%;
+    height: 2.3rem;
+    transition: all 0.25s;
 }
 
 .btn-notRead {
@@ -134,6 +162,13 @@ main {
     background: var(--gray1);
     height: 1.8rem;
     color: #fff;
+    transition: all 0.25s;
+}
+
+.btn-notRead:hover {
+    width: 95%;
+    height: 2.3rem;
+    transition: all 0.25s;
 }
 
 .btn-delete {
@@ -141,6 +176,13 @@ main {
     background: var(--orange5);
     height: 1.8rem;
     color: #fff;
+    transition: all 0.25s;
+}
+
+.btn-delete:hover {
+    width: 95%;
+    height: 2.3rem;
+    transition: all 0.25s;
 }
 
 footer {
@@ -243,7 +285,7 @@ footer {
 }
 
 #btn-newBook {
-    width: 50%;
+    width: 30%;
     border: 0;
     border-radius: 10px;
     background: var(--orange4);
@@ -251,4 +293,11 @@ footer {
     align-self: center;
     height: 4rem;
     font-size: 1.5rem;
+    transition: all 0.25s;
+}
+
+#btn-newBook:hover {
+    width: 35%;
+    height: 4.5rem;
+    transition: all 0.25s;
 }
