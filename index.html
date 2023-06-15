@@ -3,35 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.webp" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
     <title>Library</title>
 </head>
 <body>
     <header>
-        <div class="title-logo">
-            <img src="" alt="">
-            <h1>Library</h1>
-        </div>
+        <h1 class="title-logo">Library</h1>
         <button id="btn-addBook">ADD BOOK</button>
     </header>
-        
+    <section class="library-buttons">
+        <button id="btn-empty">Empty library</button>
+        <form class="sort-buttons">
+            <label for="sort-list">Sort by:</label>
+            <select name="sort-list" id="sort-list">
+                <option value="1">Title (A -> Z)</option>
+                <option value="2">Title (Z -> A)</option>
+                <option value="3">Author (A -> Z)</option>
+                <option value="4">Author (Z -> A)</option>
+                <option value="5">Pages (Min -> Max)</option>
+                <option value="6">Pages (Max -> Min)</option>
+                <option value="7">Read first</option>
+                <option value="8">Not read first</option>
+            </select>
+            <button type="submit" id="btn-sort">Sort</button>
+        </form>
+    </section>
     <main>
-        <div class="library-buttons">
-            <button id="btn-empty">Empty library</button>
-            <form class="sort-buttons">
-                <label for="sort-list">Sort by:</label>
-                <select name="sort-list" id="sort-list">
-                    <option value="1">Title (A -> Z)</option>
-                    <option value="2">Title (Z -> A)</option>
-                    <option value="3">Author (A -> Z)</option>
-                    <option value="4">Author (Z -> A)</option>
-                    <option value="5">Pages (Min -> Max)</option>
-                    <option value="6">Pages (Max -> Min)</option>
-                    <option value="7">Is read? (First read)</option>
-                    <option value="8">Is read? (First not read)</option>
-                </select>
-                <button type="submit" id="btn-sort">Sort</button>
-            </form>
-        </div>
         <div class="library">
         </div>
     </main>
@@ -42,11 +40,24 @@
     
     <section class="form-popup hidden">
         <form id="form-addBook">
-            <input type="text" name="title" id="title" required>
-            <input type="text" name="author" id="author" required>
-            <input type="number" name="pages" id="pages" required>
-            <input type="checkbox" name="isRead" id="isRead" value="checked">
-            <button type="submit" id="btn-newBook">Add book</button>
+            <h2>Add a new book</h2>
+            <div>
+                <label for="title">Title:</label>
+                <input type="text" name="title" id="title" required oninput="this.value = this.value.replace(/[^a-zA-Z]/,'')">
+            </div>
+            <div>
+                <label for="author">Author:</label>
+                <input type="text" name="author" id="author" required oninput="this.value = this.value.replace(/[^a-zA-Z]/,'')">
+            </div>
+            <div>
+                <label for="pages">Pages:</label>
+                <input type="number" name="pages" id="pages" required>
+            </div>
+            <div>
+                <input type="checkbox" name="isRead" id="isRead" value="checked">
+                <label for="isRead" class="isReadLabel"></label>
+            </div>
+            <button type="submit" id="btn-newBook">ADD BOOK</button>
         </form>
     </section>
 </body>
